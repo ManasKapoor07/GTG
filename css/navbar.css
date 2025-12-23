@@ -1,0 +1,97 @@
+/* ========= Navbar ========= */
+
+.navbar {
+  width: 100%;
+  padding: 14px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo */
+.logo {
+  font-weight: 700;
+  font-size: 26px;
+  color: #1e6b3b;
+}
+
+/* center links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  font-size: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #123c6a;
+  font-weight: 400;
+}
+
+/* “Shop” with caret icon */
+.nav-shop-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-shop-link i {
+  font-size: 10px;
+  color: #0a4b23;
+}
+
+/* right side: search + button */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Font Awesome search icon button */
+.nav-search {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b4d1f;
+  font-size: 18px;
+}
+
+/* Shop Now pill */
+.nav-shop-btn {
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #005322, #007e3a);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-shop-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
