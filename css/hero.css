@@ -5,15 +5,12 @@
   padding-bottom: 40px;
 }
 
-/* ========= Hero Section ========= */
-
 .hero {
-  padding: 80px 70px 80px; 
+  padding: 80px 70px 80px;
   height: 100vh;
   max-width: 100%;
 }
 
-/* badge pill */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -42,6 +39,7 @@
   margin-top: 30px;
   font-size: 56px;
   font-weight: 700;
+  letter-spacing: -1px;
   line-height: 1.05;
   color: #032e15;
 }
@@ -57,15 +55,22 @@
 .stat-number {
   font-size: 72px;
   font-weight: 700;
-  background: linear-gradient(180deg, #57866e, #0f6a3d);
+  line-height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 46, 21, 0.5),
+    rgba(1, 102, 48, 0.6) 
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .stat-label {
   margin-top: 0;
+  font-weight: 300;
+  line-height: 104%;
   font-size: 22px;
-  color: #0e6237;
+  color: rgba(13, 84, 43, 1);
 }
 
 /* hero CTA button */
