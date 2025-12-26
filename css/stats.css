@@ -1,7 +1,38 @@
-
 .comparison-section {
   padding: 80px 16px;
   background: #ffffff;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.icon.tick {
+  background: #032e15;
+  color: #ffffff;
+}
+
+.icon.tick::before {
+  content: "✓";
+}
+
+.icon.cross {
+  border: 1.5px solid #1f2937;
+  color: #1f2937;
+  background: transparent;
+}
+
+.icon.cross::before {
+  content: "×";
+  font-size: 16px;
 }
 
 .container {
@@ -11,15 +42,16 @@
 }
 
 .heading .dash {
-  color: #9ca3af;
-  font-size: 14px;
+  color: #032e15;
+  font-size: 40px;
+  font-weight: 300;
   letter-spacing: 2px;
 }
 
 .heading h2 {
   margin-top: 8px;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 .table-container {
@@ -29,8 +61,16 @@
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   table-layout: fixed;
+}
+
+td {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 thead th {
@@ -38,6 +78,44 @@ thead th {
   font-size: 14px;
   font-weight: 600;
   color: var(--text-muted);
+}
+
+thead th.highlight {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+/* Bottom rounded corners (last row only) */
+tbody tr:last-child td.highlight {
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+td.highlight,
+th.highlight {
+  background: #f0fdf4;
+  position: relative;
+}
+
+td.highlight::before,
+th.highlight::before,
+td.highlight::after,
+th.highlight::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+}
+
+td.highlight::before,
+th.highlight::before {
+  left: 0;
+}
+
+td.highlight::after,
+th.highlight::after {
+  right: 0;
 }
 
 .feature-col {
@@ -54,10 +132,11 @@ thead th {
   height: 80px;
   background: #f3f4f6;
   border-radius: 16px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 8px;
+  margin: 20px auto 8px;
 }
 
 .product-card img {
@@ -100,7 +179,7 @@ tbody tr:last-child td {
   margin-top: 40px;
   padding: 14px 32px;
   border-radius: 999px;
-  background: #14532d;
+  background: linear-gradient(180deg, #032e15 0%, #016630 100%);
   color: #fff;
   border: none;
   font-size: 15px;
@@ -110,4 +189,129 @@ tbody tr:last-child td {
 
 .cta:hover {
   background: #166534;
+}
+
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .heading .dash {
+    font-size: 28px;
+  }
+
+  .heading h2 {
+    font-size: 28px;
+  }
+
+  table {
+    min-width: 900px; 
+  }
+
+  .feature-col {
+    width: 240px;
+  }
+
+  .brand {
+    width: 160px;
+  }
+
+  td {
+    font-size: 14px;
+  }
+
+  tbody td {
+    padding: 14px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-section {
+    padding: 48px 8px;
+  }
+
+  .heading .dash {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .heading h2 {
+    font-size: 22px;
+  }
+
+  .table-container {
+    margin-top: 32px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 720px; 
+  }
+
+  thead th {
+    padding-bottom: 16px;
+    font-size: 12px;
+  }
+
+  .product-card {
+    width: 56px;
+    height: 56px;
+    margin: 12px auto 6px;
+  }
+
+  .brand-name {
+    font-size: 12px;
+  }
+
+  tbody td {
+    font-size: 13px;
+    padding: 12px 8px;
+  }
+
+  tbody td:first-child {
+    font-size: 13px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .cta {
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading h2 {
+    font-size: 20px;
+  }
+
+  .heading .dash {
+    font-size: 18px;
+  }
+
+  table {
+    min-width: 680px;
+  }
+
+  .product-card {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 11px;
+  }
+
+  td {
+    font-size: 12px;
+  }
 }

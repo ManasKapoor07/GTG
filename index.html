@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/product-grid.css" />
+
     <link rel="stylesheet" href="css/collection.css" />
     <link rel="stylesheet" href="css/stats.css" />
-    <link rel="stylesheet" href="css/footer-stats.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
     <script src="js/script.js"></script>
     <script src="js/collection-accordion.js"></script>
     <script src="js/stats-counter.js"></script>
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -27,19 +29,28 @@
     <div class="hero-wrapper">
       <div class="navbar">
         <div class="logo">GTG</div>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <div class="nav-links">
           <a href="#">Home</a>
           <div class="nav-shop-link">
             <a href="#">Shop</a>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
+
           <a href="#">Fragrances</a>
           <a href="#">About Us</a>
           <a href="#">Blog</a>
           <a href="#">Contact</a>
+
+          <button class="nav-shop-btn mobile-only">Shop Now</button>
         </div>
 
-        <div class="nav-right">
+        <div class="nav-right desktop-only">
           <button class="nav-search">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -59,15 +70,17 @@
 
         <div class="stats">
           <div class="stat">
-            <div class="stat-number">10x</div>
+            <div class="stat-number-hero">10x</div>
             <div class="stat-label">power</div>
           </div>
+
           <div class="stat">
-            <div class="stat-number">9</div>
+            <div class="stat-number-hero">9</div>
             <div class="stat-label">ingredients</div>
           </div>
+
           <div class="stat">
-            <div class="stat-number">20K+</div>
+            <div class="stat-number-hero">20K+</div>
             <div class="stat-label">happy customers</div>
           </div>
         </div>
@@ -76,10 +89,8 @@
       </div>
     </div>
 
-    <!-- PRODUCT SECTION -->
     <section class="product-section">
       <div class="product-grid">
-        <!-- LEFT: GALLERY -->
         <div class="product-gallery">
           <div class="product-main">
             <button class="nav-btn prev-btn">
@@ -97,7 +108,6 @@
             </button>
           </div>
 
-          <!-- dots below main image -->
           <div class="carousel-dots">
             <button class="dot active" data-index="0"></button>
             <button class="dot" data-index="1"></button>
@@ -114,32 +124,31 @@
               <img src="/assests/main-bottle.svg" alt="Variant 1" />
             </button>
             <button class="thumb" data-index="1">
-              <img src="/assests/thumb1.jpg" alt="Variant 2" />
+              <img loading="lazy" src="/assests/thumb1.jpg" alt="Variant 2" />
             </button>
             <button class="thumb" data-index="2">
-              <img src="/assests/thumb2.jpg" alt="Variant 3" />
+              <img loading="lazy" src="/assests/thumb2.jpg" alt="Variant 3" />
             </button>
             <button class="thumb" data-index="3">
-              <img src="/assests/thumb3.jpg" alt="Variant 4" />
+              <img loading="lazy" src="/assests/thumb3.jpg" alt="Variant 4" />
             </button>
             <button class="thumb" data-index="4">
-              <img src="/assests/thumb4.jpg" alt="Variant 5" />
+              <img loading="lazy" src="/assests/thumb4.jpg" alt="Variant 5" />
             </button>
 
             <button class="thumb active" data-index="5">
-              <img src="/assests/thumb1.jpg" alt="Variant 7" />
+              <img loading="lazy" src="/assests/thumb1.jpg" alt="Variant 7" />
             </button>
             <button class="thumb" data-index="6">
-              <img src="/assests/thumb2.jpg" alt="Variant 8" />
+              <img loading="lazy" src="/assests/thumb2.jpg" alt="Variant 8" />
             </button>
             <button class="thumb" data-index="7">
-              <img src="/assests/thumb3.jpg" alt="Variant 9" />
+              <img loading="lazy" src="/assests/thumb3.jpg" alt="Variant 9" />
             </button>
           </div>
         </div>
 
         <div class="product-details">
-          <!-- heading block -->
           <header class="product-header">
             <h1>GTG Perfumes</h1>
             <div class="rating">
@@ -173,34 +182,32 @@
                 <span class="plan-price-strike">$146</span>
               </div>
             </button>
+            <div class="line"></div>
 
             <div class="plan-body">
               <div class="plan-block">
                 <p class="block-label">Choose a Fragrance</p>
                 <div class="fragrance-grid">
                   <button
-                    class="fragrance-item active"
+                    class="fragrance-item best-seller"
                     data-fragrance="original"
                   >
-                    <span class="radio-indicator"></span>
-                    <img src="./assests/original.png" />
+                    <span class="badge badge--green">BEST SELLER</span>
                     <span class="label">Original</span>
+                    <span class="radio-indicator"></span>
+                    <img loading="lazy" src="./assests/orange.png" />
                   </button>
-                  <button
-                    class="fragrance-item active"
-                    data-fragrance="original"
-                  >
+
+                  <button class="fragrance-item" data-fragrance="lily">
                     <span class="radio-indicator"></span>
-                    <img src="./assests/original.png" />
-                    <span class="label">Original</span>
+                    <span class="label">Lily</span>
+                    <img src="./assests/lily.svg" />
                   </button>
-                  <button
-                    class="fragrance-item active"
-                    data-fragrance="original"
-                  >
+
+                  <button class="fragrance-item" data-fragrance="rose">
                     <span class="radio-indicator"></span>
-                    <img src="./assests/original.png" />
-                    <span class="label">Original</span>
+                    <span class="label">Rose</span>
+                    <img src="./assests/rose.svg" />
                   </button>
                 </div>
               </div>
@@ -209,33 +216,51 @@
                 <p class="block-label">What’s Included:</p>
 
                 <div class="included-cards">
-                  <button class="included-card active" data-included>
+                  <button class="included-card active" data-purchase="every30">
                     <span class="included-title">Every 30 Days</span>
-                    <img src="./assests/main-bottle.svg" />
+                    <img
+                      loading="lazy"
+                      loading="lazy"
+                      src="./assests/orange.png"
+                    />
                   </button>
 
-                  <button class="included-card" data-included>
-                    <span class="included-title">One Time <b>(Free)</b></span>
+                  <button class="included-card one" data-purchase="one-time">
+                    <span class="included-title"
+                      >One Time <b class="included-free">(Free)</b></span
+                    >
                     <div class="included-thumbs">
-                      <img src="./assests/thumb1.svg" />
-                      <img src="./assests/thumb2.svg" />
-                      <img src="./assests/thumb3.svg" />
+                      <img src="./assests/one.svg" />
                     </div>
                   </button>
                 </div>
 
                 <ul class="included-list">
-                  <li><span>✔</span> 1 Bottle shipped monthly</li>
-                  <li><span>✔</span> Free sampler for all fragrances</li>
-                  <li><span>✔</span> 50% OFF shipping</li>
-                  <li><span>✔</span> Cancel anytime after 3 months</li>
-                  <li><span>✔</span> 28 Day Money Back Guarantee*</li>
+                  <li>
+                    <img src="./assests/check.svg" /> 1 Bottle shipped monthly
+                  </li>
+                  <li>
+                    <img src="./assests/check.svg" /><b class="boldl">Free</b>
+                    sampler for all fragrances
+                  </li>
+                  <li>
+                    <img src="./assests/check.svg" /><b class="boldl">
+                      50% OFF shipping
+                    </b>
+                  </li>
+                  <li>
+                    <img src="./assests/check.svg" />Cancel anytime after 3
+                    months
+                  </li>
+                  <li>
+                    <img src="./assests/check.svg" />28 Day Money Back
+                    Guarantee*
+                  </li>
                 </ul>
               </div>
             </div>
           </section>
 
-          <!-- DOUBLE -->
           <section class="plan-card" data-plan="double">
             <button class="plan-header" data-plan-header>
               <div class="plan-header-left">
@@ -247,22 +272,170 @@
                 <span class="plan-price-strike">$246</span>
               </div>
             </button>
+            <div class="line"></div>
 
             <div class="plan-body">
-              <p class="block-label">Choose a Fragrance</p>
-              <div class="fragrance-grid">
-                <button class="fragrance-item" data-fragrance>
-                  <span>Original ×2</span>
-                </button>
-                <button class="fragrance-item" data-fragrance>
-                  <span>Mix & Match</span>
-                </button>
-                <button class="fragrance-item" data-fragrance>
-                  <span>Gift Bundle</span>
-                </button>
+              <div class="plan-block">
+                <p class="block-label">Choose a Fragrance 1</p>
+                <div class="fragrance-grid" data-fragrance-group="1">
+                  <button
+                    class="fragrance-item best-seller"
+                    data-fragrance="original"
+                  >
+                    <span class="badge badge--green">BEST SELLER</span>
+                    <span class="label">Original</span>
+                    <span class="radio-indicator"></span>
+                    <img loading="lazy" src="./assests/orange.png" />
+                  </button>
+
+                  <button class="fragrance-item" data-fragrance="lily">
+                    <span class="radio-indicator"></span>
+                    <span class="label">Lily</span>
+                    <img src="./assests/lily.svg" />
+                  </button>
+
+                  <button class="fragrance-item" data-fragrance="rose">
+                    <span class="radio-indicator"></span>
+                    <span class="label">Rose</span>
+                    <img src="./assests/rose.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="plan-block">
+                <p class="block-label">Choose a Fragrance 2</p>
+                <div class="fragrance-grid" data-fragrance-group="2">
+                  <button
+                    class="fragrance-item best-seller"
+                    data-fragrance="original"
+                  >
+                    <span class="badge badge--green">BEST SELLER</span>
+                    <span class="label">Original</span>
+                    <span class="radio-indicator"></span>
+                    <img src="./assests/orange.png" />
+                  </button>
+
+                  <button class="fragrance-item" data-fragrance="lily">
+                    <span class="radio-indicator"></span>
+                    <span class="label">Lily</span>
+                    <img src="./assests/lily.svg" />
+                  </button>
+
+                  <button class="fragrance-item" data-fragrance="rose">
+                    <span class="radio-indicator"></span>
+                    <span class="label">Rose</span>
+                    <img src="./assests/rose.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="plan-block">
+                <p class="block-label">What’s Included:</p>
+
+                <div class="included-cards">
+                  <button class="included-card active" data-purchase="every30">
+                    <span class="included-title">Every 30 Days</span>
+                    <img src="./assests/orange.png" />
+                  </button>
+
+                  <button class="included-card one" data-purchase="one-time">
+                    <span class="included-title"
+                      >One Time <b class="included-free">(Free)</b></span
+                    >
+                    <div class="included-thumbs">
+                      <img src="./assests/one.svg" />
+                    </div>
+                  </button>
+                </div>
+
+                <ul class="included-list">
+                  <li>
+                    <img src="./assests/check.svg" /> 1 Bottle shipped monthly
+                  </li>
+                  <li>
+                    <img src="./assests/check.svg" /><b class="boldl">Free</b>
+                    sampler for all fragrances
+                  </li>
+                  <li>
+                    <img src="./assests/check.svg" /><b class="boldl">
+                      50% OFF shipping
+                    </b>
+                  </li>
+                  <li>
+                    <img src="./assests/check.svg" />Cancel anytime after 3
+                    months
+                  </li>
+                  <li>
+                    <img src="./assests/check.svg" />28 Day Money Back
+                    Guarantee*
+                  </li>
+                </ul>
               </div>
             </div>
           </section>
+          <div id="addToCartBtn" class="add-to-cart-btn">Add to Cart</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection">
+      <div class="collection-grid">
+        <div class="collection-left">
+          <h2>Our Collection</h2>
+
+          <div class="accordion">
+            <button class="accordion-item active">
+              <div class="accordion-header">
+                <span>Signature Scents</span>
+                <span class="icon">−</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Discover our curated line of signature perfumes, designed to
+                  become your daily companion.
+                </p>
+              </div>
+            </button>
+
+            <button class="accordion-item">
+              <div class="accordion-header">
+                <span>Signature Scents</span>
+                <span class="icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Elegant fragrances crafted with timeless appeal and modern
+                  sophistication.
+                </p>
+              </div>
+            </button>
+
+            <button class="accordion-item">
+              <div class="accordion-header">
+                <span>Signature Scents</span>
+                <span class="icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>A refined selection created for everyday luxury.</p>
+              </div>
+            </button>
+
+            <button class="accordion-item">
+              <div class="accordion-header">
+                <span>Signature Scents</span>
+                <span class="icon">+</span>
+              </div>
+              <div class="accordion-content">
+                <p>Carefully blended notes that leave a lasting impression.</p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="collection-right">
+          <img
+            loading="lazy"
+            src="./assests/collection.jpg"
+            alt="Perfume Collection"
+          />
         </div>
       </div>
     </section>
@@ -309,28 +482,40 @@
 
                 <th class="brand highlight">
                   <div class="product-card">
-                    <img src="https://picsum.photos/80?1" />
+                    <img loading="lazy" src="./assests/gtg.jpg" alt="GTG" />
                   </div>
                   <span class="brand-name">GTG</span>
                 </th>
 
                 <th class="brand">
                   <div class="product-card">
-                    <img src="https://picsum.photos/80?2" />
+                    <img
+                      loading="lazy"
+                      src="./assests/thumb3.jpg"
+                      alt="Arone"
+                    />
                   </div>
                   <span class="brand-name">Arone</span>
                 </th>
 
                 <th class="brand">
                   <div class="product-card">
-                    <img src="https://picsum.photos/80?3" />
+                    <img
+                      loading="lazy"
+                      src="./assests/thumb2.jpg"
+                      alt="Bella"
+                    />
                   </div>
                   <span class="brand-name">Bella</span>
                 </th>
 
                 <th class="brand">
                   <div class="product-card">
-                    <img src="https://picsum.photos/80?4" />
+                    <img
+                      loading="lazy"
+                      src="./assests/thumb4.jpg"
+                      alt="Daises"
+                    />
                   </div>
                   <span class="brand-name">Daises</span>
                 </th>
@@ -348,18 +533,18 @@
 
               <tr>
                 <td>Longevity</td>
-                <td class="highlight">✔</td>
-                <td>✕</td>
-                <td>✕</td>
-                <td>✔</td>
+                <td class="highlight"><span class="icon tick"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon tick"></span></td>
               </tr>
 
               <tr>
                 <td>Sillage</td>
-                <td class="highlight">✔</td>
-                <td>✕</td>
-                <td>✕</td>
-                <td>✕</td>
+                <td class="highlight"><span class="icon tick"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon cross"></span></td>
               </tr>
 
               <tr>
@@ -371,35 +556,35 @@
               </tr>
 
               <tr>
-                <td>Blend & Harmony</td>
-                <td class="highlight">✔</td>
-                <td>✕</td>
-                <td>✕</td>
-                <td>✕</td>
+                <td>Blend &amp; Harmony</td>
+                <td class="highlight"><span class="icon tick"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon cross"></span></td>
               </tr>
 
               <tr>
                 <td>Skin Compatibility</td>
-                <td class="highlight">✔</td>
-                <td>✕</td>
-                <td>✕</td>
-                <td>✕</td>
+                <td class="highlight"><span class="icon tick"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon cross"></span></td>
               </tr>
 
               <tr>
                 <td>Scent Profile</td>
-                <td class="highlight">✔</td>
-                <td>✔</td>
-                <td>✕</td>
-                <td>✕</td>
+                <td class="highlight"><span class="icon tick"></span></td>
+                <td><span class="icon tick"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon cross"></span></td>
               </tr>
 
               <tr>
                 <td>Price vs. Quality</td>
-                <td class="highlight">✔</td>
-                <td>✔</td>
-                <td>✕</td>
-                <td>✔</td>
+                <td class="highlight"><span class="icon tick"></span></td>
+                <td><span class="icon tick"></span></td>
+                <td><span class="icon cross"></span></td>
+                <td><span class="icon tick"></span></td>
               </tr>
             </tbody>
           </table>
@@ -408,5 +593,55 @@
         <button class="cta">Try It Risk-Free</button>
       </div>
     </section>
+
+    <footer class="footer">
+      <h3 class="footer-brand">GTG</h3>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">Fragrances</a>
+        </div>
+
+        <div class="footer-col">
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-col footer-social">
+          <a href="#" class="social">
+            <img src="./assests/facebook.svg" /> Facebook
+          </a>
+          <a href="#" class="social">
+            <img src="./assests/insta.svg" />Instagram
+          </a>
+
+          <a href="#" class="social"> <img src="./assests/twitter.svg" />X </a>
+        </div>
+
+        <div class="footer-newsletter">
+          <p class="newsletter-title">
+            Join our newsletter to stay up to date on features and releases.
+          </p>
+
+          <div class="newsletter-form">
+            <input
+              type="email"
+              id="newsletter-email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </div>
+
+          <p class="newsletter-note">
+            By subscribing you agree to our
+            <a href="#">Privacy Policy</a> and provide consent to receive
+            updates from our company.
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

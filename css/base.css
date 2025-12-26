@@ -10,7 +10,6 @@ body {
   height: 100%;
 }
 
-/* plain page background; hero gets SVG separately */
 body {
   min-height: 100vh;
   background: #f7f8fb;

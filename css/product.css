@@ -1,41 +1,34 @@
-/* ===============================
-   LAYOUT: PRODUCT SECTION
-================================ */
-
 .product-section {
   display: flex;
   width: 100%;
-  padding: 24px 20px 40px;
+  padding: 24px 16px 32px;
   justify-content: center;
   background: #ffffff;
   box-sizing: border-box;
 }
 
-/* desktop / large tablet */
 .product-grid {
-  width: min(1120px, 100%);
+  width: 100%;
+  max-width: 1160px;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  column-gap: 32px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 48px;
   align-items: flex-start;
 }
 
-/* ===============================
-   LEFT: GALLERY
-================================ */
-
 .product-gallery {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
 }
 
-/* main image area */
 .product-main {
   position: relative;
   overflow: hidden;
   height: 640px;
-  margin-top: -60px;
+  max-height: 70vh;
+  margin-top: -50px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -46,17 +39,14 @@
   height: 72%;
   width: auto;
   max-width: 100%;
-  border-radius: 22px;
+  border-radius: 10px;
   display: block;
 }
 
-/* slide animation */
 .product-main img {
   opacity: 1;
   transform: translateX(0);
-  transition:
-    opacity 280ms ease,
-    transform 280ms ease;
+  transition: opacity 280ms ease, transform 280ms ease;
 }
 
 .product-main img.is-exiting {
@@ -69,14 +59,13 @@
   transform: translateX(12px);
 }
 
-/* arrow buttons */
 .nav-btn {
   position: absolute;
   bottom: 52px;
   transform: translateY(50%);
   width: 40px;
   height: 40px;
-  border-radius: 999px;
+  border-radius: 100%;
   border: none;
   background: #ffffff;
   margin: 0 22px;
@@ -101,7 +90,6 @@
   right: 0;
 }
 
-/* dots below main image */
 .carousel-dots {
   margin: 10px auto 0;
   position: relative;
@@ -128,16 +116,15 @@
   background: #4b5563;
 }
 
-/* thumbnails grid */
 .product-thumbs {
   margin-top: 18px;
   display: grid;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 0 48px;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  width: 70%;
+  padding: 0 12px;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 18px;
 }
 
 .thumb {
@@ -162,24 +149,18 @@
   z-index: 1;
 }
 
-/* ===============================
-   RIGHT: PRODUCT DETAILS
-================================ */
-
 .product-details {
   width: 100%;
-  max-width: 440px;
-  padding: 16px 18px 18px;
+  padding: 20px;
   background: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
 }
 
-/* heading block */
 .product-header h1 {
   margin: 0;
-  font-size: 36px;
-  line-height: 1;
+  font-size: 32px;
+  line-height: 1.1;
   font-weight: 600;
   color: rgba(3, 46, 21, 1);
 }
@@ -225,16 +206,14 @@
 .subtext {
   margin-top: 10px;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 1.4;
+  font-size: 15px;
   text-align: justify;
   color: rgba(3, 46, 21, 0.85);
 }
 
-/* PLAN CARD / ACCORDION */
 .plan-card {
   border: 1px solid #d1d5db;
-  border-radius: 14px;
+  border-radius: 4px;
   overflow: hidden;
   background: #ffffff;
   margin-top: 16px;
@@ -244,17 +223,15 @@
   display: none;
 }
 
-/* most popular strip */
 .plan-popular-header {
   background: linear-gradient(90deg, #16a34a, #065f46);
   color: #ffffff;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   padding: 8px 0;
 }
 
-/* header row */
 .plan-header {
   width: 100%;
   background: #ffffff;
@@ -272,27 +249,10 @@
   gap: 8px;
 }
 
-/* base radio */
-.plan-radio {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid #9ca3af;   /* grey */
-  background: transparent;
-  transition: all 0.2s ease;
-}
-
-/* ACTIVE plan → green radio */
-.plan-card.active .plan-radio {
-  border-color: #16a34a;
-  background: #16a34a;
-}
-
-
 .plan-title {
-  font-size: 13px;
-  font-weight: 600;
-  color: #111827;
+  font-size: 20px;
+  font-weight: 300;
+  color: rgba(3, 46, 21, 1);
 }
 
 .plan-price {
@@ -313,74 +273,127 @@
   text-decoration: line-through;
 }
 
-/* body */
 .plan-body {
   padding: 12px 14px 14px;
 }
 
 .plan-block {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .block-label {
-  font-size: 11px;
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 16px;
   color: #111827;
 }
 
-/* fragrance grid */
 .fragrance-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 10px;
 }
 
 .fragrance-item {
+  position: relative;
+  height: 140px;
+  padding: 8px;
+  border-radius: 12px;
   border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 8px 6px;
-  background: #ffffff;
+  background: #f9f9f9;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  justify-content: space-between;
   cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge--green {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 8px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 4px 8px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0) 40%
+    ),
+    linear-gradient(180deg, #032e15 0%, #016630 100%);
+  border-radius: 10px 0 10px 0;
+  box-shadow: 0 4px 12px rgba(3, 46, 21, 0.35);
+}
+
+.radio-indicator {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #9ca3af;
+}
+
+.radio-indicator::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid #16a34a;
+  opacity: 0;
+}
+
+.fragrance-item.active .radio-indicator::before {
+  opacity: 1;
 }
 
 .fragrance-item img {
-  height: 56px;
+  height: 94px;
+  width: 54px;
   object-fit: contain;
 }
 
-.fragrance-item span {
-  font-size: 11px;
-  font-weight: 500;
+.fragrance-item .label {
+  font-size: 13px;
+  font-weight: 300;
+  color: #919798;
 }
 
 .fragrance-item.active {
   border-color: #16a34a;
-  box-shadow: 0 0 0 1px rgba(22, 163, 74, 0.4);
+  background: #f2faf4;
 }
 
-/* included options */
+.fragrance-item.active .radio-indicator {
+  border-color: #16a34a;
+  background: #16a34a;
+}
+
 .included-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 10px;
 }
 
 .included-card {
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
+  border: 1px solid #919798;
+  border-radius: 6px;
   padding: 8px;
+  min-height: 200px;
   background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.included-card.one {
+  min-height: 220px;
 }
 
 .included-card.active {
@@ -389,13 +402,26 @@
 }
 
 .included-title {
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 300;
+  color: #6f7577;
 }
 
 .included-card img {
-  height: 64px;
+  height: 144px;
   object-fit: contain;
+}
+
+.included-free {
+  font-weight: 800;
+  color: #032e15;
+}
+
+.line {
+  width: 90%;
+  height: 1px;
+  background-color: #919798;
+  margin-left: 14px;
 }
 
 .included-thumbs {
@@ -405,11 +431,15 @@
 
 .included-thumbs img {
   width: 100%;
-  height: 64px;
+  margin-top: 16px;
+  height: 100px;
   object-fit: contain;
 }
 
-/* included list */
+.boldl {
+  font-weight: 600;
+}
+
 .included-list {
   list-style: none;
   padding: 0;
@@ -421,62 +451,101 @@
 .included-list li {
   display: flex;
   gap: 6px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #032e15;
   align-items: flex-start;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .included-list span {
   color: #16a34a;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+.plan-radio {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #9ca3af;
+  background: transparent;
+  position: relative;
+}
 
-/* tablets */
+.plan-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid #9ca3af;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.plan-card.active .plan-radio {
+  border-color: #4b946d;
+  background: #3a865e;
+}
+
+.plan-card.active .plan-radio::before {
+  border-color: #16a34a;
+  opacity: 1;
+}
+
+/* --- CTA BUTTON --- */
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  width: 100%;
+  max-width: 620px;
+  height: 52px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, #032e15 0%, #016630 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(3, 46, 21, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
 @media (max-width: 1024px) {
   .product-grid {
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .product-main {
     height: 520px;
-    margin-top: -40px;
+    margin-top: -20px;
   }
 
   .product-main img#mainImage {
     height: 68%;
   }
-}
-
-/* phones */
-@media (max-width: 768px) {
-  .product-section {
-    align-items: flex-start;
-    padding: 20px 12px 32px;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr;
-    width: 100%;
-    row-gap: 24px;
-  }
-
-  .product-gallery {
-    order: 1;
-  }
 
   .product-details {
-    order: 2;
-    max-width: 100%;
-    padding: 16px 12px 18px;
+    padding-inline: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    padding: 16px 12px 28px;
   }
 
   .product-main {
     height: 420px;
-    margin-top: -24px;
+    margin-top: -16px;
     padding-inline: 8px;
   }
 
@@ -485,7 +554,7 @@
   }
 
   .product-thumbs {
-    padding: 0 12px;
+    padding: 0 4px;
     gap: 8px;
     margin-top: 10px;
   }
@@ -510,7 +579,7 @@
   }
 
   .product-header h1 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .subtext {
@@ -518,9 +587,16 @@
     line-height: 1.4;
     text-align: left;
   }
+
+  .included-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .add-to-cart-btn {
+    max-width: 100%;
+  }
 }
 
-/* very small phones */
 @media (max-width: 480px) {
   .product-main {
     height: 360px;
@@ -532,5 +608,9 @@
 
   .thumb.active img {
     height: 60px;
+  }
+
+  .product-header h1 {
+    font-size: 20px;
   }
 }

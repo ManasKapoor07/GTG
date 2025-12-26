@@ -1,5 +1,3 @@
-// stats-counter.js
-
 document.addEventListener("DOMContentLoaded", function () {
   const numbers = Array.from(document.querySelectorAll(".stat-number"));
   if (!numbers.length) return;
@@ -12,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     numbers.forEach((el) => {
       const target = parseInt(el.getAttribute("data-target"), 10) || 0;
-      const duration = 1200; // ms
+      const duration = 1200; 
       const startTime = performance.now();
 
       function update(now) {
@@ -23,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (progress < 1) {
           requestAnimationFrame(update);
         } else {
-          el.textContent = target + "%"; // ensure exact
+          el.textContent = target + "%"; 
         }
       }
 
@@ -34,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const statsSection = document.querySelector(".collection-stats");
   if (!statsSection) return;
 
-  // trigger when stats section enters viewport
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
